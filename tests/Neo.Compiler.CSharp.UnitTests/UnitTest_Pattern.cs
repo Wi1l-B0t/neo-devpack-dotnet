@@ -53,7 +53,7 @@ namespace Neo.Compiler.CSharp.UnitTests
         [TestMethod]
         public void RecursivePattern_Test()
         {
-            Assert.AreEqual(false, Contract.TestRecursivePattern());
+            Assert.AreEqual(true, Contract.TestRecursivePattern());
         }
 
         [TestMethod]
