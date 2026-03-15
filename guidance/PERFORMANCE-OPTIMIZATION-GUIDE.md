@@ -21,7 +21,7 @@ Every operation in NEO has a gas cost. Understanding these costs is crucial for 
 
 | Operation | Gas Cost | Notes |
 |-----------|----------|-------|
-| Storage.Put (per byte) | About 0.001 GAS per-operation + About 0.0003 GAS per-byte for add, 0.000075 GAS per-byte for update | Most expensive operation |
+| Storage.Put (per byte) | About 0.001 GAS per-operation + About 0.0003 GAS per-byte for add, 0.000075 GAS per-byte for update | Minimize storage size |
 | Storage.Get | About 0.001 GAS per-operation | Cache frequently accessed data |
 | Contract.Call | About 0.001 GAS per-operation | Minimize external calls |
 | Runtime.CheckWitness | About 0.0003 GAS per-operation | Cache results when possible |
