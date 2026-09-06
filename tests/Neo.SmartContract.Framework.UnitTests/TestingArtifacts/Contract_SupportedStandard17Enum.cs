@@ -18,7 +18,7 @@ public abstract class Contract_SupportedStandard17Enum(Neo.SmartContract.Testing
     /// <summary>
     /// Optimization: "All"
     /// </summary>
-    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9o/pDRupTKiWPxJfdrdtkN8n9/wppc0NvbnRyYWN0AQABBQAA/f8BEM5AEc5ADAEAQfa0a+JBkl3oMUrYJgRFEEBXAQF4StkoJAZFCSIGygAUsyQlDCBUaGUgYXJndW1lbnQgIm93bmVyIiBpcyBpbnZhbGlkLjoREYhOEFHQEcBweGjBRVCLQdWNXuhK2CYFRRBA2yFAVwICERGIThBR0BHAcHhowUVQi0HVjV7oStgmBkUQIgTbIXFpeZ5xaRC1JgQJQGmxJA94aMFFUItBdVT1lCIOaXhowUVQi0E5DOMKCEBXAAR4StkoJAZFCSIGygAUsyQkDB9UaGUgYXJndW1lbnQgImZyb20iIGlzIGludmFsaWQuOnlK2SgkBkUJIgbKABSzJCIMHVRoZSBhcmd1bWVudCAidG8iIGlzIGludmFsaWQuOnoQtSYjDB5UaGUgYW1vdW50IGNhbm5vdCBiZSBuZWdhdGl2ZS46eEH4J+yMJAQJQHoQmCYWept4NRb///8kBAlAenk1C////0V7enl4NAQIQFcBBHh5elMTwAwIVHJhbnNmZXJBlQFvYXlwaNgmBQkiBnk3AAAmH3t6eBPAHwwOb25ORVAxN1BheW1lbnR5QWJ9W1JFQFcABEBWAgpG/v//Cj7+//8SwGBAWBAMB0VYQU1QTEUTwCMo/v//WBAMB0VYQU1QTEUTwCMZ/v//WBAMB0VYQU1QTEUTwCK7QNt0CCg=").AsSerializable<Neo.SmartContract.NefFile>();
+    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH9o/pDRupTKiWPxJfdrdtkN8n9/wppc0NvbnRyYWN0AQABBQAA/f8BEM5AEc5ADAEAQfa0a+JBkl3oMUrYJgRFEEBXAQF4StkoJAZFCSIGygAUsyQlDCBUaGUgYXJndW1lbnQgIm93bmVyIiBpcyBpbnZhbGlkLjoREYhOEFHQEcBweGjBRVCLQdWNXuhK2CYFRRBAEJ5AVwICERGIThBR0BHAcHhowUVQi0HVjV7oStgmBkUQIgQQnnFpeZ5xaRC1JgQJQGmxJA94aMFFUItBdVT1lCIOaXhowUVQi0E5DOMKCEBXAAR4StkoJAZFCSIGygAUsyQkDB9UaGUgYXJndW1lbnQgImZyb20iIGlzIGludmFsaWQuOnlK2SgkBkUJIgbKABSzJCIMHVRoZSBhcmd1bWVudCAidG8iIGlzIGludmFsaWQuOnoQtSYjDB5UaGUgYW1vdW50IGNhbm5vdCBiZSBuZWdhdGl2ZS46eEH4J+yMJAQJQHoQmCYWept4NRb///8kBAlAenk1C////0V7enl4NAQIQFcBBHh5elMTwAwIVHJhbnNmZXJBlQFvYXlwaNgmBQkiBnk3AAAmH3t6eBPAHwwOb25ORVAxN1BheW1lbnR5QWJ9W1JFQFcABEBWAgpG/v//Cj7+//8SwGBAWBAMB0VYQU1QTEUTwCMo/v//WBAMB0VYQU1QTEUTwCMZ/v//WBAMB0VYQU1QTEUTwCK7QCPqhKU=").AsSerializable<Neo.SmartContract.NefFile>();
 
     #endregion
 
@@ -54,7 +54,7 @@ public abstract class Contract_SupportedStandard17Enum(Neo.SmartContract.Testing
     /// Safe method
     /// </summary>
     /// <remarks>
-    /// Script: VwEBeErZKCQGRQkiBsoAFLMkJQwgVGhlIGFyZ3VtZW50ICJvd25lciIgaXMgaW52YWxpZC46ERGIThBR0BHAcHhowUVQi0HVjV7oStgmBUUQQNshQA==
+    /// Script: VwEBeErZKCQGRQkiBsoAFLMkJQwgVGhlIGFyZ3VtZW50ICJvd25lciIgaXMgaW52YWxpZC46ERGIThBR0BHAcHhowUVQi0HVjV7oStgmBUUQQBCeQA==
     /// INITSLOT 0101 [64 datoshi]
     /// LDARG0 [2 datoshi]
     /// DUP [2 datoshi]
@@ -92,7 +92,8 @@ public abstract class Contract_SupportedStandard17Enum(Neo.SmartContract.Testing
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("balanceOf")]

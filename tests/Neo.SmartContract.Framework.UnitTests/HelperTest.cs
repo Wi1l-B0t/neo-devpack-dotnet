@@ -74,7 +74,7 @@ namespace Neo.SmartContract.Framework.UnitTests
         public void TestBigIntegerParseandCast()
         {
             Assert.AreEqual(2000000000000000, Contract.TestBigIntegerCast([0x00, 0x00, 0x8d, 0x49, 0xfd, 0x1a, 0x07]));
-            AssertGasConsumed(1538940);
+            AssertGasConsumed(1293450);
             var exception = Assert.ThrowsException<TestException>(() => Contract.TestBigIntegerParseHexString("00008d49fd1a07"));
             AssertGasConsumed(2032230);
             Assert.IsInstanceOfType<TargetInvocationException>(exception.InnerException);

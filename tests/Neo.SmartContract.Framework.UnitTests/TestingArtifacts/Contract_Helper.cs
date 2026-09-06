@@ -18,7 +18,7 @@ public abstract class Contract_Helper(Neo.SmartContract.Testing.SmartContractIni
     /// <summary>
     /// Optimization: "All"
     /// </summary>
-    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHA7znO4OTpJcbCoGp54UQN2G/OrARhdG9pAQABBQAA/TsBDAYKCwwNDg9AVwIBeAiXcAwMVVQtRVJST1ItMTIzcWgkBGngFUBXAAF42yFAVwACeHmzQFcAAnh5tEBXAAN4eXqlQFcAAnl4NANAVwACeA95pkBXAAN4eXqmQFcAAXjbKErYJgVFEEDbIUBXAAF4NwAAQFcAAXgIlzlAVwABeEokBkUMAQARjUBXAQAMAwECA9swStFwaEBXAAF4SiQGRQwBABGNQFcCAAwLaGVsbG8gd29ybGRwaNswcWlAVwMADAMBAgPbMHAMAwQFBtswcWhpi3JqQFcCAAwDAQID2zBwaBERjHFpQFcCAAwDAQID2zBwaBKNcWlAVwIADAMBAgPbMHBoEo5xaUAMFAECAwQFBgcICQoLDA0OD6q7zN3uQFcAAXhKAIABgAC7OUBXAAF4SgCAAYAAuzlATd1P0Q==").AsSerializable<Neo.SmartContract.NefFile>();
+    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHA7znO4OTpJcbCoGp54UQN2G/OrARhdG9pAQABBQAA/TsBDAYKCwwNDg9AVwIBeAiXcAwMVVQtRVJST1ItMTIzcWgkBGngFUBXAAF42yFAVwACeHmzQFcAAnh5tEBXAAN4eXqlQFcAAnl4NANAVwACeA95pkBXAAN4eXqmQFcAAXjbKErYJgVFEEAQnkBXAAF4NwAAQFcAAXgIlzlAVwABeEokBkUMAQARjUBXAQAMAwECA9swStFwaEBXAAF4SiQGRQwBABGNQFcCAAwLaGVsbG8gd29ybGRwaNswcWlAVwMADAMBAgPbMHAMAwQFBtswcWhpi3JqQFcCAAwDAQID2zBwaBERjHFpQFcCAAwDAQID2zBwaBKNcWlAVwIADAMBAgPbMHBoEo5xaUAMFAECAwQFBgcICQoLDA0OD6q7zN3uQFcAAXhKAIABgAC7OUBXAAF4SgCAAYAAuzlA/WQoQg==").AsSerializable<Neo.SmartContract.NefFile>();
 
     #endregion
 
@@ -128,7 +128,7 @@ public abstract class Contract_Helper(Neo.SmartContract.Testing.SmartContractIni
     /// Unsafe method
     /// </summary>
     /// <remarks>
-    /// Script: VwABeNsoStgmBUUQQNshQA==
+    /// Script: VwABeNsoStgmBUUQQBCeQA==
     /// INITSLOT 0001 [64 datoshi]
     /// LDARG0 [2 datoshi]
     /// CONVERT 28 'ByteString' [8192 datoshi]
@@ -138,7 +138,8 @@ public abstract class Contract_Helper(Neo.SmartContract.Testing.SmartContractIni
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("testBigIntegerCast")]

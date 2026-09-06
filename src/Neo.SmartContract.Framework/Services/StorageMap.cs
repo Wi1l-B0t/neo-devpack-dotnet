@@ -246,7 +246,8 @@ namespace Neo.SmartContract.Framework.Services
         [OpCode(OpCode.DROP)]
         [OpCode(OpCode.PUSH0)]
         [OpCode(OpCode.JMP, "0x04")]
-        [OpCode(OpCode.CONVERT, StackItemType.Integer)]
+        [OpCode(OpCode.PUSH0)]
+        [OpCode(OpCode.ADD)]
         public extern BigInteger GetIntegerOrZero(ByteString key);
 
         /// <summary>
@@ -365,7 +366,8 @@ namespace Neo.SmartContract.Framework.Services
         [OpCode(OpCode.DROP)]
         [OpCode(OpCode.PUSH0)]
         [OpCode(OpCode.JMP, "0x04")]
-        [OpCode(OpCode.CONVERT, StackItemType.Integer)]
+        [OpCode(OpCode.PUSH0)]
+        [OpCode(OpCode.ADD)]
         public extern BigInteger GetIntegerOrZero(byte[] key);
 
         /// <summary>

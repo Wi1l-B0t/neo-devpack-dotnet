@@ -18,7 +18,7 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// <summary>
     /// Optimization: "All"
     /// </summary>
-    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0cAVcAARF4WMFFU4tQQeY/GIRAVwABeFjBRVOLUEGSXegxStgmBUUQQNshQFcAARJ4WcFFU4tQQeY/GIRAVwABeFnBRVOLUEGSXegxStgmBUUQQNshQFcBAUGb9mfODARkYXRhUBLAcBN4aMFFU4tQQeY/GIRAVwEBQZv2Z84MBGRhdGFQEsBweGjBRVOLUEGSXegxStgmBUUQQNshQFcBAUGb9mfOeBGIThBR0FASwHAAewwFdGVzdDFowUVTi1BB5j8YhEBXAQFBm/ZnzngRiE4QUdBQEsBwDAV0ZXN0MWjBRVOLUEGSXegxStgmBUUQQNshQFYCQZv2Z84MBGRhdGFQEsBgQZv2Z84MDHJlYWRvbmx5ZGF0YVASwGFAxx1wfg==").AsSerializable<Neo.SmartContract.NefFile>();
+    public static Neo.SmartContract.NefFile Nef => Convert.FromBase64String(@"TkVGM1Rlc3RpbmdFbmdpbmUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0cAVcAARF4WMFFU4tQQeY/GIRAVwABeFjBRVOLUEGSXegxStgmBUUQQBCeQFcAARJ4WcFFU4tQQeY/GIRAVwABeFnBRVOLUEGSXegxStgmBUUQQBCeQFcBAUGb9mfODARkYXRhUBLAcBN4aMFFU4tQQeY/GIRAVwEBQZv2Z84MBGRhdGFQEsBweGjBRVOLUEGSXegxStgmBUUQQBCeQFcBAUGb9mfOeBGIThBR0FASwHAAewwFdGVzdDFowUVTi1BB5j8YhEBXAQFBm/ZnzngRiE4QUdBQEsBwDAV0ZXN0MWjBRVOLUEGSXegxStgmBUUQQBCeQFYCQZv2Z84MBGRhdGFQEsBgQZv2Z84MDHJlYWRvbmx5ZGF0YVASwGFAWheaAQ==").AsSerializable<Neo.SmartContract.NefFile>();
 
     #endregion
 
@@ -28,7 +28,7 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// Unsafe method
     /// </summary>
     /// <remarks>
-    /// Script: VwABeFjBRVOLUEGSXegxStgmBUUQQNshQA==
+    /// Script: VwABeFjBRVOLUEGSXegxStgmBUUQQBCeQA==
     /// INITSLOT 0001 [64 datoshi]
     /// LDARG0 [2 datoshi]
     /// LDSFLD0 [2 datoshi]
@@ -44,7 +44,8 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("get")]
@@ -54,7 +55,7 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// Unsafe method
     /// </summary>
     /// <remarks>
-    /// Script: VwEBQZv2Z84MBGRhdGFQEsBweGjBRVOLUEGSXegxStgmBUUQQNshQA==
+    /// Script: VwEBQZv2Z84MBGRhdGFQEsBweGjBRVOLUEGSXegxStgmBUUQQBCeQA==
     /// INITSLOT 0101 [64 datoshi]
     /// SYSCALL 9BF667CE 'System.Storage.GetContext' [16 datoshi]
     /// PUSHDATA1 64617461 'data' [8 datoshi]
@@ -76,7 +77,8 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("get2")]
@@ -86,7 +88,7 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// Unsafe method
     /// </summary>
     /// <remarks>
-    /// Script: VwABeFnBRVOLUEGSXegxStgmBUUQQNshQA==
+    /// Script: VwABeFnBRVOLUEGSXegxStgmBUUQQBCeQA==
     /// INITSLOT 0001 [64 datoshi]
     /// LDARG0 [2 datoshi]
     /// LDSFLD1 [2 datoshi]
@@ -102,7 +104,8 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("getReadonly")]
@@ -178,7 +181,7 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// Unsafe method
     /// </summary>
     /// <remarks>
-    /// Script: VwEBQZv2Z854EYhOEFHQUBLAcAwFdGVzdDFowUVTi1BBkl3oMUrYJgVFEEDbIUA=
+    /// Script: VwEBQZv2Z854EYhOEFHQUBLAcAwFdGVzdDFowUVTi1BBkl3oMUrYJgVFEEAQnkA=
     /// INITSLOT 0101 [64 datoshi]
     /// SYSCALL 9BF667CE 'System.Storage.GetContext' [16 datoshi]
     /// LDARG0 [2 datoshi]
@@ -206,7 +209,8 @@ public abstract class Contract_StaticStorageMap(Neo.SmartContract.Testing.SmartC
     /// DROP [2 datoshi]
     /// PUSH0 [1 datoshi]
     /// RET [0 datoshi]
-    /// CONVERT 21 'Integer' [8192 datoshi]
+    /// PUSH0 [1 datoshi]
+    /// ADD [8 datoshi]
     /// RET [0 datoshi]
     /// </remarks>
     [DisplayName("teststoragemap_Getbyteprefix")]
