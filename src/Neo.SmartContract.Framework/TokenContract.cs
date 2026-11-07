@@ -32,7 +32,6 @@ namespace Neo.SmartContract.Framework
         [Stored(Prefix_TotalSupply)]
         public static BigInteger TotalSupply { [Safe] get; protected set; }
 
-
         [Safe]
         public static BigInteger BalanceOf(UInt160 owner)
         {
