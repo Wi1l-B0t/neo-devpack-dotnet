@@ -13,6 +13,7 @@ using Neo.SmartContract.Framework.Attributes;
 using Neo.SmartContract.Framework.Services;
 using System;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 namespace Neo.SmartContract.Framework
 {
@@ -21,6 +22,9 @@ namespace Neo.SmartContract.Framework
         protected const byte Prefix_TotalSupply = 0x00;
         protected const byte Prefix_Balance = 0x01;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        protected static byte[] BalanceKey(ByteString key) => new byte[1] { Prefix_Balance }.Concat(key);
+
         public abstract string Symbol { [Safe] get; }
 
         public abstract byte Decimals { [Safe] get; }
@@ -28,26 +32,26 @@ namespace Neo.SmartContract.Framework
         [Stored(Prefix_TotalSupply)]
         public static BigInteger TotalSupply { [Safe] get; protected set; }
 
+
         [Safe]
         public static BigInteger BalanceOf(UInt160 owner)
         {
             if (!owner.IsValid)
                 throw new Exception("The argument \"owner\" is invalid.");
-            var balanceMap = new LocalStorageMap(Prefix_Balance);
-            return (BigInteger)balanceMap[owner]!;
+            return (BigInteger)Storage.Get(BalanceKey(owner))!;
         }
 
         protected static bool UpdateBalance(UInt160 owner, BigInteger increment)
         {
-            var balanceMap = new LocalStorageMap(Prefix_Balance);
-            BigInteger balance = (BigInteger)balanceMap[owner]!;
+            var key = BalanceKey(owner);
+            BigInteger balance = (BigInteger)Storage.Get(key)!;
             balance += increment;
             if (balance < 0)
                 return false;
             if (balance.IsZero)
-                balanceMap.Delete(owner);
+                Storage.Delete(key);
             else
-                balanceMap.Put(owner, balance);
+                Storage.Put(key, balance);
             return true;
         }
     }
